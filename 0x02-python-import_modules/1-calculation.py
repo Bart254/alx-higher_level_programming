@@ -3,7 +3,7 @@ if __name__ == "__main__":
     import calculator_1 as calc
     a = 10
     b = 5
-    signs = '-+*/'
+    signs = '+-*/'
     for c in signs:
         if c == '-':
             fun = calc.sub
