@@ -14,7 +14,7 @@ def roman_to_int(roman_string):
                 else:
                     is_roman = False
             if is_roman is False:
-                return None
+                return 0
         total = 0
         i = 0
         len_l = len(numeral_list)
@@ -29,3 +29,4 @@ def roman_to_int(roman_string):
                 total += numeral_list[i]
                 i += 1
         return total
+    return 0
