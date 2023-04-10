@@ -67,7 +67,10 @@ class Rectangle:
         """
         a = self.__width
         b = self.__height
-        return ("#" * a + "\n") * (b - 1) + "#" * a
+        s = Rectangle.print_symbol
+        if a == 0 or b == 0:
+            return ""
+        return (s * a + "\n") * (b - 1) + s * a
 
     def __repr__(self):
         """ official representation of rectangle object"""

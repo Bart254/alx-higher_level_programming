@@ -65,6 +65,8 @@ class Rectangle:
         """
         a = self.__width
         b = self.__height
+        if a == 0 or b == 0:
+            return ""
         return ("#" * a + "\n") * (b - 1) + "#" * a
 
     def __repr__(self):
