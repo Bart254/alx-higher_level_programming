@@ -58,7 +58,9 @@ class Rectangle:
         """ sting repr of rectangle
         Prints # in the shape of rectangle's width and height
         """
-        return ("#" * self.__width + "\n") * self.__height
+        a = self.__width
+        b = self.__height
+        return ("#" * a + "\n") * (b - 1) + "#" * a
 
     def __repr__(self):
         """ official representation of rectangle object"""
