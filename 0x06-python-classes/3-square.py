@@ -26,3 +26,6 @@ class Square:
             Returns the area of square based on size
         """
         return self.__size * self.__size
+if __name__ == "__main__":
+    import doctest
+    doctest.area()
