@@ -1,0 +1,23 @@
+"""
+This function prints the full name, it accepts two arguments:
+first_name, last_name
+
+Let us add the directory to sys path
+
+>>> import sys
+>>> sys.path.append('..')
+
+Next, we import the function:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("Castro", "Omondi")
+My name is Castro Omondi
+
+if non-string is passed as arg, raise TypeError
+>>> say_my_name(89, "leon")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>> say_my_name("leon", 89)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+"""

@@ -1,0 +1,40 @@
+"""
+function divides all elements of a matrix by a constant number
+First let's import the module
+>>> import sys
+>>> sys.path.append('..')
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+function has a matrix whose elements are divided by div and rounded to 2 d.p
+>>> matrix_divided([[4, 6, 8]], 2)
+[[2.0, 3.0, 4.0]]
+>>> matrix_divided([[4, 5, 6]], 3)
+[[1.33, 1.67, 2.0]]
+
+if matrix is not a list of integers/ floats, raise TypeError with message
+>>> matrix_divided(9, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([2, 3, 4], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[2, 3, 'r']], 7)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Each row of the matrix must be of the same size, otherwise otherwise, raise a TypeError
+>>> matrix_divided([[2, 3, 4], [2, 3, 4, 5]], 3)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Div must be a number else raise TypeError with message
+>>> matrix_divided([[2, 3, 4]], "str")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Div must be greater than zero
+>>> matrix_divided([[2, 3, 4]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+"""
