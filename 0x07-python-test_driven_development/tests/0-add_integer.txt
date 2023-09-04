@@ -1,31 +1,27 @@
-"""
-Module to imported is in a different dir so let's import sys
->>> import sys
+This file contains the tests for addition function
 
-Let's add the file's path
->>> sys.path.append('..')
-
-import module
->>> add_integer = __import__('0-add_integer').add_integer
->>> add_integer(2, 3)
-5
->>> add_integer(-1, 3)
-2
->>> add_integer(-1, -2)
--3
-
-Also works on float, but they are first converted to integers:
->>> add_integer(9.2, 3.3)
-12
->>> add_integer(9.7, 2.9)
-11
-
-All arguments must be integers or float, otherwise TypeError with message is raised:
->>> add_integer("sd", 9)
+>>> add_integer = __import__("0-add_integer").add_integer
+>>> add_integer(9, 7)
+16
+>>> add_integer(-9, -7)
+-16
+>>> add_integer(9, 7.5)
+16
+>>> add_integer(9.5, 7.5)
+16
+>>> add_integer("yh", 98)
 Traceback (most recent call last):
-TypeError: sd must be an integer
->>> add_integer(89, {})
+...
+TypeError: a must be an integer
+>>> add_integer(98, "yh")
 Traceback (most recent call last):
-TypeError: {} must be an integer
-
-"""
+...
+TypeError: b must be an integer
+>>> add_integer("po", "lk")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(None, None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
