@@ -20,8 +20,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """initializes private instace width and height"""
-        self.height = height
         self.width = width
+        self.height = height
         self.add_instance()
 
     @property
