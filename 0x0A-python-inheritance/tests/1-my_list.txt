@@ -1,0 +1,26 @@
+This file confirms if MyList inherits all methoda and attributes of list object
+>>> import sys
+>>> sys.path.append('..')
+>>> MyList = __import__("1-my_list").MyList
+>>> numbers = MyList()
+>>> numbers.append(2)
+>>> numbers.append(9)
+>>> print(numbers)
+[2, 9]
+>>> print(len(numbers))
+2
+>>> numbers[1]
+9
+>>> numbers[:]
+[2, 9]
+>>> numbers[-1]
+9
+>>> numbers.insert(0, 8)
+>>> print(numbers)
+[8, 2, 9]
+>>> numbers.remove(9)
+>>> numbers.append(17)
+>>> print(numbers)
+[8, 2, 17]
+>>> numbers.print_sorted()
+[2, 8, 17]
