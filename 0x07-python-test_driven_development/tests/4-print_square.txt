@@ -14,7 +14,6 @@ Finally, we print the square:
 ####
 ####
 >>> print_square(0)
-<BLANKLINE>
 
 if arg is not int, raise an error:
 >>> print_square("4")
@@ -23,10 +22,18 @@ TypeError: size must be an integer
 >>> print_square(4.0)
 Traceback (most recent call last):
 TypeError: size must be an integer
+>>> print_square(-1.7)
+Traceback (most recent call last):
+TypeError: size must be an integer
 
 if args is less than zero, raise an error
 >>> print_square(-1)
 Traceback (most recent call last):
 ValueError: size must be >= 0
+
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
 
 """

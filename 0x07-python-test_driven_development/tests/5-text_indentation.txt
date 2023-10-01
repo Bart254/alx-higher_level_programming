@@ -19,4 +19,10 @@ if arg is not of type string, print out an error message
 Traceback (most recent call last):
 TypeError: text must be a string
 
+Let's try it without any argument
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
 """

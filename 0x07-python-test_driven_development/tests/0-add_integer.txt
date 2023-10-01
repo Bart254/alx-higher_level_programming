@@ -1,5 +1,9 @@
 This file contains the tests for addition function
+Let's find add the directory of our function
+>>> import sys
+>>> sys.path.append("..")
 
+Now that the path is added, let's run the tests
 >>> add_integer = __import__("0-add_integer").add_integer
 >>> add_integer(9, 7)
 16
@@ -25,3 +29,13 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+>>> add_integer(3)
+101
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+>>> add_integer(1, 2, 3)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given

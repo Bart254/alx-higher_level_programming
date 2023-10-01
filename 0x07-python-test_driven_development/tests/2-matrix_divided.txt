@@ -13,25 +13,48 @@ function has a matrix whose elements are divided by div and rounded to 2 d.p
 if matrix is not a list of integers/ floats, raise TypeError with message
 >>> matrix_divided(9, 3)
 Traceback (most recent call last):
+...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix_divided([2, 3, 4], 3)
 Traceback (most recent call last):
+...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix_divided([[2, 3, 'r']], 7)
 Traceback (most recent call last):
+...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Each row of the matrix must be of the same size, otherwise otherwise, raise a TypeError
 >>> matrix_divided([[2, 3, 4], [2, 3, 4, 5]], 3)
 Traceback (most recent call last):
+...
 TypeError: Each row of the matrix must have the same size
 
 Div must be a number else raise TypeError with message
 >>> matrix_divided([[2, 3, 4]], "str")
 Traceback (most recent call last):
+..
 TypeError: div must be a number
 
 Div must be greater than zero
 >>> matrix_divided([[2, 3, 4]], 0)
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
+
+Let's try the function with no arg
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Let's try only one arg
+>>> matrix_divided([[2, 3, 3]])
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Let div be float
+>>> matrix_divided([[4, 6, 8]], 7.8)
+[[0.51, 0.77, 1.03]]
+>>> matrix_divided([[4.7, 5.6, 8.6]], 7.8)
+[[0.6, 0.72, 1.1]]
