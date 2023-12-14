@@ -1,3 +1,3 @@
--- Shows all tables in database passes to sql
+-- Shows all tables in database passed to sql
 -- Show Tables
 SHOW TABLES;
