@@ -2,10 +2,6 @@
 const prototype = require('./5-square');
 
 class Square extends prototype {
-  constructor (size) {
-    super(size);
-  }
-
   charPrint (c) {
     let square = '';
     if (!c) {
