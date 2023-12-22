@@ -12,7 +12,7 @@ if __name__ == "__main__":
     host = 'localhost'
     db = MySQLdb.connect(host=host, user=usr, passwd=pwd, port=3306, db=db)
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name LIKE 'n%'\
+    query = "SELECT * FROM states WHERE name LIKE 'N%'\
             COLLATE utf8mb4_0900_bin ORDER BY id ASC"
     cursor.execute(query)
     rows = cursor.fetchall()
