@@ -23,6 +23,7 @@ if __name__ == "__main__":
     for r in rows:
         for col in r:
             if r[-1] == col and rows[-1] == r:
-                print(col)
+                print(col, end="")
             else:
-                print(col, end=",")
+                print(col, end=", ")
+    print()
