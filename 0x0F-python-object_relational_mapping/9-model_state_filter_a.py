@@ -10,10 +10,12 @@ if __name__ == "__main__":
     from sqlalchemy.orm import sessionmaker
     import sys
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
+                           (sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
     for obj in session.query(State).order_by(State.id.asc()).\
-            filter(State.name.like('%a%')):
+            filter(State.name.like('%a%').collate('utf8mb4_0900_bin')):
         print(f'{obj.id}: {obj.name}')
     session.close()
