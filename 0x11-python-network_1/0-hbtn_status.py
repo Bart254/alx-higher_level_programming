@@ -8,7 +8,7 @@ if __name__ == "__main__":
         line1 = "Body response:"
         data = response.read()
         data_type = type(data)
-        utf8 = data.decode("UTF-8")
+        utf8 = data.decode('utf-8')
         print(line1)
         print(f'    - type: {data_type}')
         print(f'    - content: {data}')

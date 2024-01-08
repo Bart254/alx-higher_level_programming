@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """Fetches the url of a request using requests module
 """
 if __name__ == "__main__":

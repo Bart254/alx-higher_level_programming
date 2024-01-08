@@ -6,4 +6,5 @@ if __name__ == "__main__":
     import requests
     url = sys.argv[1]
     response = requests.get(url)
-    print(response.headers['X-Request-Id'])
+    if 'X-Request-Id' in response.headers.keys():
+        print(response.headers['X-Request-Id'])
