@@ -1,3 +1,3 @@
 #!/bin/bash
 #Returns the length of a curl request
-curl -sI "${1}"| grep  Content-Length | awk '{print$2}'
+curl -sI "${1}"|  awk '/^Content-Length/ {print$2}'
