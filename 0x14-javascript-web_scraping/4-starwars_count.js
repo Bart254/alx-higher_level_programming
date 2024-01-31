@@ -8,9 +8,13 @@ request.get(url, (err, response, body) => {
   if (err) {
     console.error(err);
   } else {
-    const body = JSON.parse(response.body);
-    const results = body.results; let nb = 0;
-    for (let index = 0; index < body.count; index++) {
+    let data = body;
+    if (typeof body === 'string') {
+      data = JSON.parse(body);
+    }
+    const results = data.results;
+    let nb = 0;
+    for (let index = 0; index < data.count; index++) {
       if (results[index].characters.includes(user)) {
         nb++;
       }
