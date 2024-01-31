@@ -2,7 +2,8 @@
 // Returns the number of films ID 18 is in
 const request = require('request');
 const url = process.argv[2];
-const user = 'https://swapi-api.alx-tools.com/api/people/18/';
+const id = 18;
+const user = 'https://swapi-api.alx-tools.com/api/people/' + id + '/';
 request.get(url, (err, response, body) => {
   if (err) {
     console.error(err);
