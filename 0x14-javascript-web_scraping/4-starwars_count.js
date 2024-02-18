@@ -3,7 +3,6 @@
 const request = require('request');
 const url = process.argv[2];
 const id = 18;
-const user = 'https://swapi-api.alx-tools.com/api/people/' + id + '/';
 request.get(url, (err, response, body) => {
   if (err) {
     console.error(err);
@@ -15,8 +14,10 @@ request.get(url, (err, response, body) => {
     const results = data.results;
     let nb = 0;
     for (let index = 0; index < data.count; index++) {
-      if (results[index].characters.includes(user)) {
-        nb++;
+      for (let i = 0; i < results[index].characters.length; i++) {
+        if (results[index].characters[i].includes(id)) {
+          nb++;
+        }
       }
     }
     console.log(nb);
