@@ -13,7 +13,7 @@ request.get(url, (err, response, body) => {
     }
     const results = data.results;
     let nb = 0;
-    for (let index = 0; index < data.count; index++) {
+    for (let index = 0; index < results.length; index++) {
       for (let i = 0; i < results[index].characters.length; i++) {
         if (results[index].characters[i].includes(id)) {
           nb++;
