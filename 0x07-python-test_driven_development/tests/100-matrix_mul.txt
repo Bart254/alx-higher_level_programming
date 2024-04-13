@@ -101,3 +101,14 @@ Matrix multiplication - only Matrix product (two matrices)
 
 >>> matrix_mul([[1.5, 2.5], [3.5, 4.5]], [[1.5, 2.5], [3.5, 4.5]])
 [[11.0, 15.0], [21.0, 29.0]]
+
+Missing args
+>>> matrix_mul()
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+>>> matrix_mul( [[1.5, 2.5], [3.5, 4.5]])
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
