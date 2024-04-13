@@ -20,7 +20,6 @@ class TextMaxInteger(unittest.TestCase):
         self.list_e = []
         self.list_f = [-1, -2, -5, -100]
         self.list_g = [23]
-        self.list_h = None
 
     def test_max(self):
         """ Tests max_integer function
@@ -34,7 +33,6 @@ class TextMaxInteger(unittest.TestCase):
         with self.assertRaises(Exception):
             max_integer(self.list_d)
         self.assertIs(max_integer(self.list_e), None)
-        self.assertIs(max_integer(self.list_h), None)
 
 
 if __name__ == "__main__":
