@@ -1,18 +1,26 @@
 #!/usr/bin/python3
-""" Module to find the largest integer in a list
+""" Max Integer
 """
 
 
 def max_integer(list=[]):
-    """ Function to find and return the largest integer in a list of integers
-    If the list is empty the function returns none
+    """ Returns the maximum integer in a list
+
+    Parameters
+    ----------
+    list: list
+        A list of integers
+
+    Returns
+    ------
+    Max integer in the list passed
     """
-    if len(list) == 0:
+    if not list or len(list) == 0:
         return None
-    result = list[0]
+    _max = list[0]
     i = 1
     while i < len(list):
-        if list[i] > result:
-            result = list[i]
+        if list[i] > _max:
+            _max = list[i]
         i += 1
-    return result
+    return _max
